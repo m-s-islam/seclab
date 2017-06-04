@@ -1,0 +1,64 @@
+\documentclass[12pt]{report}
+\usepackage{fancyhdr}
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[english]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage{float}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\onehalfspacing
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+% header and footer
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\headheight{15pt}
+\fancyhead[L]{Part 2: Web Application Vulnerabilities - 2}
+\fancyhead[R]{Security Insider Lab II}
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+
+% Title page
+
+\begin{document}
+	
+	\title{ \normalsize \textsc{Lab Report}
+			\\ [2.0cm]
+			\HRule{0.5pt} \\
+			\LARGE \textbf{\uppercase{Security Insider Lab II \\
+			Part 1: Web Application Vulnerabilities - 1}}
+			\HRule{2pt} \\ [0.5cm]
+			\normalsize \vspace*{5\baselineskip}}
+	\date{22-05-2017}
+	\author{
+			Mohammad Saiful Islam \\
+			Abhijeet Patil \\
+			Thejaswi Preetham}
+	\maketitle
+	\newpage
+	
+	
+	
+	
+	\section*{Exercise 1: Request Manipulation}
+	
+	
+	\paragraph*{1.} {\bf Install a tool which allows you to manipulate requests of your browser. Briefly discuss your choice.}\\ 
+	We are using Burp Suite as it provides support for numerous types of attack insertion points within requests, including parameters, cookies, HTTP headers, parameter names, and the URL file path. Also, it has a  coverage of over 100 generic vulnerabilities, such as SQL injection and cross-site scripting (XSS), with great performance against all vulnerabilities in the OWASP top 10. So we use it to manipulate requests of the browser.
+	
+	\paragraph*{2.} {\bf Briefly describe the steps to request a loan from which your victim will benefit.}
+	
+\end{document}

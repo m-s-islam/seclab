@@ -1,0 +1,14 @@
+	$sql="insert into ".$htbconf['db/loans']." (".$htbconf['db/loans.owner'].", ".$htbconf['db/loans.amount'].", ".$htbconf['db/loans.interest'].", ".$htbconf['db/loans.period'].", ".$htbconf['db/loans.debitacc'].", .$htbconf['db/loans.creditacc'].", ".$htbconf['db/loans.time'].")
+	values(".$_SESSION['userid'].",".$http['loan'].",".​$http['interest']​
+	.",".$http['period'].",".($http['debitacc'] ^ $xorValue).",".($http['creditacc'] ^ $xorValue).", now())";
+	mysql_query($sql, $db_link);
+
+	<tr>
+	<td>Interest rate</td>
+	<td>
+	<?php
+	print "<b>".$http['interest']."&nbsp;%</b>\n";
+	print "<input type=\"hidden\" name=\"interest\" value=\"".$http['interest']."\">";
+	?>
+	</td>
+	</tr>
