@@ -62,10 +62,22 @@
 	
 	\section*{Exercise 2: Black-Box Web Application Vulnerability Testing}
 	
-	\paragraph*{1.}{\bf Download two (or more) web vulnerability scanners and describe how you setup all the appropriate environ-ment settings needed.}\\
+	\paragraph*{1.}{\bf Download two (or more) web vulnerability scanners and describe how you setup all the appropriate environment settings needed.}\\
 	
 	For Black-box web application vulnerability testing, we have downloaded OWASP Zed Attack Proxy(also known as OWASP ZAP), nikto and uniscan.\\
 	
 	{\bf Nikto:} Nikto is a small and simple tool examines a website and reports back to you the potential vulnerabilities that it found that you could use to exploit. 
+	Using Nikto is very straight-forward, as the following command:\\\\
+	{\tt nikto -h [hostname or ip]}
+	\\or\\
+	{\tt perl nikto -host [hostname or ip]}
+	\\\\Our vBank web application is located at {\sf http://192.168.0.29/vBank}. Here is the screenshot of the nikto scan:
 	
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/nikto.jpg}
+		\caption{request a loan}
+	\end{figure}
+	
+	
+
 \end{document}
