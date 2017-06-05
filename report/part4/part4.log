@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  5 JUN 2017 20:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  6 JUN 2017 01:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -851,36 +851,94 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
+
+ []
+
+<images/sqlmap1.jpg, id=30, 1371.1225pt x 742.775pt>
+File: images/sqlmap1.jpg Graphic file (type jpg)
+ <use images/sqlmap1.jpg>
+Package pdftex.def Info: images/sqlmap1.jpg used on input line 137.
+(pdftex.def)             Requested size: 475.13014pt x 257.39102pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 137--138
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--139
+
+ []
+
+[5 <./images/sqli1.jpg>] <images/sqlmap2.jpg, id=35, 1053.9375pt x 359.3425pt>
+File: images/sqlmap2.jpg Graphic file (type jpg)
+
+<use images/sqlmap2.jpg>
+Package pdftex.def Info: images/sqlmap2.jpg used on input line 143.
+(pdftex.def)             Requested size: 475.13014pt x 161.9987pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 143--144
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--145
+
+ []
+
+[6 <./images/sqlmap1.jpg>]
+<images/sqlmap3.jpg, id=40, 967.615pt x 476.78125pt>
+File: images/sqlmap3.jpg Graphic file (type jpg)
+ <use images/sqlmap3.jpg>
+Package pdftex.def Info: images/sqlmap3.jpg used on input line 153.
+(pdftex.def)             Requested size: 475.13014pt x 234.11227pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 153--154
+[][] 
+ []
+
+<images/sqlmap4.jpg, id=41, 1047.915pt x 293.095pt>
+File: images/sqlmap4.jpg Graphic file (type jpg)
+ <use images/sqlmap4.jpg>
+Package pdftex.def Info: images/sqlmap4.jpg used on input line 162.
+(pdftex.def)             Requested size: 475.13014pt x 132.88884pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 162--163
+[][] 
+ []
+
+[7 <./images/sqlmap2.jpg> <./images/sqlmap3.jpg>]
+
 AED: lastpage setting LastPage
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
-
- []
-
-[5 <./images/sqli1.jpg>] (./part4.aux) ) 
+[8 <./images/sqlmap4.jpg>] (./part4.aux) ) 
 Here is how much of TeX's memory you used:
- 8551 strings out of 494945
- 130924 string characters out of 6181032
- 324280 words of memory out of 5000000
- 11619 multiletter control sequences out of 15000+600000
- 54132 words of font info for 66 fonts, out of 8000000 for 9000
+ 8581 strings out of 494945
+ 131442 string characters out of 6181032
+ 325280 words of memory out of 5000000
+ 11635 multiletter control sequences out of 15000+600000
+ 54637 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,11n,43p,424b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm
--ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on part4.pdf (6 pages, 740164 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/
+lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc1
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on part4.pdf (9 pages, 1501127 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18965 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 18985 words of extra memory for PDF output out of 20736 (max. 10000000)
 

