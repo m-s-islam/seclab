@@ -66,8 +66,7 @@
 	
 	For Black-box web application vulnerability testing, we have downloaded OWASP Zed Attack Proxy(also known as OWASP ZAP), nikto and uniscan.\\
 	
-	{\bf Nikto:} Nikto is a small and simple tool examines a website and reports back to you the potential vulnerabilities that it found that you could use to exploit. 
-	Using Nikto is very straight-forward, as the following command:\\\\
+	{\bf Nikto:} Nikto is a small and simple tool, examines a website and reports back the potential vulnerabilities that it found that could use to exploit. Using Nikto is very straight-forward, as the following command:\\\\
 	{\tt nikto -h [hostname or ip]}
 	\\or\\
 	{\tt perl nikto -host [hostname or ip]}
@@ -75,9 +74,53 @@
 	
 	\begin{figure}[H]
 		\includegraphics[width=0.75\textheight]{images/nikto.jpg}
-		\caption{request a loan}
+		\caption{Nikto scan result on vBank}
 	\end{figure}
 	
+	From the scan result we can see that, Nikto has identified Some vulnerabilities along with target server and os version. It identified vulnerabilities with the OSVDB prefix. This is the 'Open Source Vulnerability Database'. This is a database maintained of known vulnerabilities at www.osvdb.org. The vulnerabilities were briefly explained on there. Unfortunately the OSVDB project was shutdown on April,2016.\\
+	Here is an example result of identified code, searched before in www.osvdb.org :
 	
-
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/osvdb.jpg}
+		\caption{OSVDB search result.}
+	\end{figure}
+	
+	{\bf Uniscan:} Uniscan is a vulnerability scanner that can scan websites and web-applications for various security issues like LFI, RFI, sql injection, xss etc. It is written in perl. It is open source and can be downloaded from sourceforge project page at {\sf http://sourceforge.net/projects/uniscan/} and can be installed by executing {\sf install-module.sh}.\\
+	There are several mode for using uniscan.\\
+	With the option 'j' uniscan would fingerprint the server of the url. Server fingerprinting simply runs commands like ping, traceroute, nslookup, nmap on the server ip address and packs the results together.\\
+	{\tt uniscan -u http://192.168.0.29/vBank -j}
+	\\	Another option is 'g' which does web based fingerprinting. It looks up specific urls.\\
+	{\tt uniscan -u http://192.168.0.29/vBank -g}
+	\\Using -q option to enable directory test in targeted server.\\
+	{\tt uniscan -u http://192.168.0.29/vBank -q}
+	\\For dynamic scan against the targeted server, uniscan uses -d option.\\
+	{\tt uniscan -u http://192.168.0.29/vBank -d}
+	\\Uniscan also have graphical user interface. The command {\tt uniscan-gui} is used to start gui mode.\\\\
+	
+	{\bf OWASP ZAP: } OWASP ZAP is a Java-based tool for testing web app security. It has an intuitive GUI and powerful features to do such things as fuzzing, scripting, spidering, proxying and attacking web apps. It is also extensible through a number of plugins. These following commands has been used to install OWASP ZAP.\\
+	{\tt sudo echo "deb OWASP Mantra OS / \#OWASP WTE Stable Repository" >> /etc/apt/sources.list}\\
+	{\tt sudo apt-get update}\\
+	{\tt sudo apt-get install owasp-wte-zap}\\
+	
+	Here is the interface of the OWASP ZAP.
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/zap1.jpg}
+		\caption{OWASP ZAP interface.}
+	\end{figure}
+	
+	Unlike other tools, OWASP ZAP is gui-based, which makes scanning even easier. In the interface, we just put our target url on the 'url to attack' field and press the 'attack' button. On the lower left box, the scanned vulnerabilities will be showed.
+	
+	\paragraph*{2.}{\bf Report how you found the different vulnerabilities: SQLi, XSS, etc.}\\\\
+	
+	We have used OWASP ZAP to find vulnerabilities of our given webapp vBank. As described before, we just put the target url {\sf http://192.168.0.29/vBank} ,  pressed attack. 
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/sqli1.jpg}
+		\caption{Scanning vBank with OWASP ZAP.}
+	\end{figure}
+	
+	The scan results a several alerts, which can be found on the bottom left corner. The high risk alert is the sql injection. The page results were successfully manipulated using the boolean conditions [ZAP' AND '1'='1' - - ] and [ZAP' AND '1'='2' - - ].\\
+	Besides sql injection, there are other vulnerabilities at medium risk. The OWASP ZAP has alerted for 9 different vunerabilites.\\
+	
+	\paragraph*{3.}{\bf Now you have collected enough information about the victim web application and found multiple serious SQL injection vulnerabilities.
+	Use an automatic exploitation tools (e.g. sqlmap) to dump all the database, upload a web shell and prove that you have control of the bank server!}\\\\
 \end{document}

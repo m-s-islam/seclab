@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  5 JUN 2017 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  5 JUN 2017 20:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -742,7 +742,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 74.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 73.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -751,46 +751,136 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--75
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--75
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
 
  []
 
 <images/nikto.jpg, id=13, 1371.1225pt x 737.75626pt>
 File: images/nikto.jpg Graphic file (type jpg)
  <use images/nikto.jpg>
-Package pdftex.def Info: images/nikto.jpg used on input line 77.
+Package pdftex.def Info: images/nikto.jpg used on input line 76.
 (pdftex.def)             Requested size: 475.13014pt x 255.6519pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 77--78
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 76--77
+[][] 
+ []
+
+[2 <./images/nikto.jpg>] <images/osvdb.jpg, id=20, 1101.11375pt x 537.00626pt>
+File: images/osvdb.jpg Graphic file (type jpg)
+
+<use images/osvdb.jpg>
+Package pdftex.def Info: images/osvdb.jpg used on input line 84.
+(pdftex.def)             Requested size: 475.13014pt x 231.71939pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 84--85
 [][] 
  []
 
 
+Overfull \hbox (4.76866pt too wide) in paragraph at lines 88--99
+[]\T1/lmr/bx/n/12 Uniscan: \T1/lmr/m/n/12 (-20) Unis-can is a vul-ner-a-bil-ity
+ scan-ner that can scan web-sites and web-applications
+ []
+
+
+Overfull \hbox (55.08223pt too wide) in paragraph at lines 88--99
+\T1/lmr/m/n/12 (-20) source and can be down-loaded from source-forge project pa
+ge at \T1/lmss/m/n/12 (-20) http://sourceforge.net/projects/uniscan/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--99
+
+ []
+
+[3 <./images/osvdb.jpg>]
+Overfull \hbox (78.08237pt too wide) in paragraph at lines 100--104
+\T1/lmtt/m/n/12 sudo echo "deb OWASP Mantra OS / #OWASP WTE Stable Repository" 
+>> /etc/apt/sources.list 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--104
+
+ []
+
+<images/zap1.jpg, id=24, 1369.115pt x 746.79pt>
+File: images/zap1.jpg Graphic file (type jpg)
+ <use images/zap1.jpg>
+Package pdftex.def Info: images/zap1.jpg used on input line 107.
+(pdftex.def)             Requested size: 475.13014pt x 259.15837pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 107--108
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+[4 <./images/zap1.jpg>] <images/sqli1.jpg, id=28, 1365.1pt x 739.76375pt>
+File: images/sqli1.jpg Graphic file (type jpg)
+
+<use images/sqli1.jpg>
+Package pdftex.def Info: images/sqli1.jpg used on input line 117.
+(pdftex.def)             Requested size: 475.13014pt x 257.47633pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 117--118
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
+
+ []
+
+
 AED: lastpage setting LastPage
-[2 <./images/nikto.jpg>] (./part4.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
+
+ []
+
+[5 <./images/sqli1.jpg>] (./part4.aux) ) 
 Here is how much of TeX's memory you used:
- 8526 strings out of 494945
- 130553 string characters out of 6181032
- 323280 words of memory out of 5000000
- 11607 multiletter control sequences out of 15000+600000
- 53677 words of font info for 61 fonts, out of 8000000 for 9000
+ 8551 strings out of 494945
+ 130924 string characters out of 6181032
+ 324280 words of memory out of 5000000
+ 11619 multiletter control sequences out of 15000+600000
+ 54132 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,11n,43p,273b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,43p,424b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm
 -ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on part4.pdf (3 pages, 374923 bytes).
+Output written on part4.pdf (6 pages, 740164 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18950 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 18965 words of extra memory for PDF output out of 20736 (max. 10000000)
 
