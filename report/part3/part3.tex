@@ -56,5 +56,46 @@
 	\maketitle
 	\newpage
 	
+	\section*{Exercise 1: Session Fixation}
+	The security team of the bank is working overtime to fix all the wholes you discovered and exploited. Assume
+	that they were successful in disabling all vulnerabilities which you exploited using JavaScript. Further, assume
+	that you can’t steal cookies anymore. Is there still a way to get access to an account of a user?
 	
+	\paragraph*{1.}{\bf Sketch an attack that allows you to take over the session of a bank user.}\\
+	\begin{itemize}
+	
+		\item[a] When we visit the bank application with a browser a cookie with the key ''USECURITYID''. This key has a random hexadecimal value assigned to it.
+		\item[b] We send a money transfer to the victim's account with a meta tag in the remark. The meta tag looks like: <meta http-equiv="Set-Cookie" content="USECURITYID=abc path=/''>
+		\item[c] Now when the victim visits his accounts page and his session has been replaced with a different session or ''USECURITYID''.
+		\item[d] The attacker now visits the bank application with his ''USECURITYID'' manually set to the same one as the victim and thus can access his account.
+	\end{itemize}
+	
+	\paragraph*{2.}{\bf 2. How can you generally verify that an application is vulnerable to this kind of attack?}\\
+	
+	\begin{itemize}
+			
+		\item[a] Copy the security token from one browser and paste it in another browser.
+		\item[b] Login from the second browser.
+		\item[c] Refresh the page in the first browser, if the page is logged in to the account with which user logged in to the second browser, the application is vulnerable to session fixation.
+	\end{itemize}
+
+	\paragraph*{3.}{\bf 3. Does https influence your attack?}\\
+	
+	https does not influence this attack.
+	
+	\paragraph*{4.}{\bf Accordingly, which countermeasure is necessary to prevent your attacks? Patch your system and test it against session fixation again.}\\
+	
+	A counter measure to prevent this attack is:
+	
+	\begin{itemize}
+		\item[i] Generating new tokens every request.
+		\item[ii] Removing tags from user inputs.
+	\end{itemize}
+		
+		
+	\section*{Exercise 2: Remote code injection}
+	
+	
+
+
 \end{document}
