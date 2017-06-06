@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  6 JUN 2017 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  6 JUN 2017 14:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,25 +752,175 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[1] 
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 102.
+
+(/usr/share/texmf/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `lmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+<images/2_1.jpg, id=13, 759.83875pt x 486.81876pt>
+File: images/2_1.jpg Graphic file (type jpg)
+ <use images/2_1.jpg>
+Package pdftex.def Info: images/2_1.jpg used on input line 105.
+(pdftex.def)             Requested size: 475.14153pt x 253.39977pt.
+
+Overfull \hbox (22.17363pt too wide) in paragraph at lines 105--106
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+[2 <./images/2_1.jpg>] <images/2_2.jpg, id=20, 1679.27374pt x 962.59625pt>
+File: images/2_2.jpg Graphic file (type jpg)
+
+<use images/2_2.jpg>
+Package pdftex.def Info: images/2_2.jpg used on input line 115.
+(pdftex.def)             Requested size: 475.13014pt x 272.34521pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+<images/2_3.jpg, id=22, 1196.47pt x 523.9575pt>
+File: images/2_3.jpg Graphic file (type jpg)
+ <use images/2_3.jpg>
+Package pdftex.def Info: images/2_3.jpg used on input line 126.
+(pdftex.def)             Requested size: 475.13014pt x 208.06824pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 126--127
+[][] 
+ []
+
+[3 <./images/2_2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+<images/2_4.jpg, id=27, 1378.14874pt x 498.86375pt>
+File: images/2_4.jpg Graphic file (type jpg)
+ <use images/2_4.jpg>
+Package pdftex.def Info: images/2_4.jpg used on input line 135.
+(pdftex.def)             Requested size: 475.13014pt x 171.98639pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 135--136
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+[4 <./images/2_3.jpg> <./images/2_4.jpg>]
+<images/2_5.jpg, id=32, 1368.11125pt x 855.195pt>
+File: images/2_5.jpg Graphic file (type jpg)
+ <use images/2_5.jpg>
+Package pdftex.def Info: images/2_5.jpg used on input line 146.
+(pdftex.def)             Requested size: 475.13014pt x 296.99998pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 146--147
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+<images/2_6.jpg, id=33, 785.93625pt x 447.6725pt>
+File: images/2_6.jpg Graphic file (type jpg)
+ <use images/2_6.jpg>
+Package pdftex.def Info: images/2_6.jpg used on input line 161.
+(pdftex.def)             Requested size: 475.13014pt x 270.64117pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 161--162
+[][] 
+ []
+
+[5 <./images/2_5.jpg>]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 167.
+
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+
+ []
+
+<images/2_7_1.jpg, id=38, 1203.49625pt x 836.12375pt>
+File: images/2_7_1.jpg Graphic file (type jpg)
+ <use images/2_7_1.jpg>
+Package pdftex.def Info: images/2_7_1.jpg used on input line 179.
+(pdftex.def)             Requested size: 475.13014pt x 330.09302pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 179--180
+[][] 
+ []
+
+[6 <./images/2_6.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+<images/2_7_2.jpg, id=45, 1372.12625pt x 1015.795pt>
+File: images/2_7_2.jpg Graphic file (type jpg)
+ <use images/2_7_2.jpg>
+Package pdftex.def Info: images/2_7_2.jpg used on input line 189.
+(pdftex.def)             Requested size: 475.13014pt x 351.73613pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 189--190
+[][] 
+ []
+
+[7 <./images/2_7_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+
 AED: lastpage setting LastPage
-[2] (./part3.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--202
+
+ []
+
+[8 <./images/2_7_2.jpg>] (./part3.aux) ) 
 Here is how much of TeX's memory you used:
- 8464 strings out of 494945
- 129497 string characters out of 6181032
+ 8606 strings out of 494945
+ 132101 string characters out of 6181032
  325278 words of memory out of 5000000
- 11561 multiletter control sequences out of 15000+600000
- 44283 words of font info for 54 fonts, out of 8000000 for 9000
+ 11662 multiletter control sequences out of 15000+600000
+ 54422 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,11n,43p,273b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/t
-exmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmtt12.pfb>
-Output written on part3.pdf (3 pages, 103918 bytes).
+ 42i,11n,43p,298b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts
+/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmtt12.pfb>
+Output written on part3.pdf (9 pages, 2023517 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13825 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 18985 words of extra memory for PDF output out of 20736 (max. 10000000)
 

