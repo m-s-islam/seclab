@@ -199,5 +199,59 @@
 	{\sf '.system("rm /var/log/user.log").'}\\
 	{\sf '.system("rm /var/www/html/shell.php").'}\\
 	{\sf '.system("rm /var/www/html/index.php").'}\\
+	
+	
+	\section*{Exercise 3: Remote Code Execution - Modern Example}
+	
+	This task presents the possibility to attack a ''modern'' Web Applications. This is a live task. You need the lab	network to perform it.
+	
+	\paragraph*{1.}{\bf Find the vulnerable webApp. Confirm your findings with your lab instructor.}\\
+	
+	We connected to the lab's network and used 'zenmap' to find the vulnerable WebApp. It was found on 192.168.1.102. Here is the screenshot of index page:
+	
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/3_1.jpg}
+		\caption{vulnerable webapp.}
+	\end{figure}
+
+	\paragraph*{2.}{\bf Can you find any interesting files. Note down those files.}\\
+	
+	We have used a scanning tool,'nikto', to look for files. We find following:
+	
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight,height=.4\textheight]{images/3_2_1.jpg}
+		\caption{scanned with nikto.}
+	\end{figure}
+	
+	Nikto has found '/robot.txt' and '/53cr37.txt'. We looked into both files and found '53cr37.txt' is interesting.
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/3_2_2.jpg}
+		\caption{53cr37.txt.}
+	\end{figure}
+	It seems the file contains the location of the flag, key and initializing vector to decrypt it.
+	
+	\paragraph*{3.}{\bf Now it is time for the actual task, find a Remote Code Execution - RCE vulnerability and use it to execute commands on the server.\\
+	Hint: What are web-templates ?!}\\
+
+	Looking at the hint, we assume that the webapp was developed using web-templates. Web applications frequently use template systems such as FreeMarker and Twig to embed dynamic content in web pages. When users input is embedded in a template in an unsafe manner, it would be vulnerable to Remote Code Execution.\\
+	
+	At this point we do not know which template was used in the webapp. We have found there is an injection point 'hname' field. We tried several combination and 'hname=\{\{7*7\}\}' worked, meaning 7*7 was ran and resulted 49. From which we can say that the template 'twig' was used.
+	
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/3_3_1.jpg}
+		\caption{Template 'twig' was found.}
+	\end{figure}
+
+	Twig's {\sf \_self} object has an {\sf 'env'} attribute, which refers to {\sf Twig\_Environment} object. The method {\sf registerUndefinedFilterCallback()} of {\sf 'env'} object can be used to registering {\sf 'exec'} or {\sf 'system'} command, and the {\sf getFilter()} method can be used to pass the command we want to execute.\\
+	
+	\paragraph*{4.}{\bf You succeeded to execute commands on the server side. Which user did you compromise?}
+	
+	By using following on argument in the url, we know that the current user of the system.\\
+	{\sf http://192.168.1.102/index.php?hname=\{\{\_self.env.registerUndefinedFilterCallback(''system'')\}\} \{\{\_self.env.getfilter(''whoami'')\}\}}\\
+	
+	The result was {\sf www-data}, meaning we have compromise the user 'www-data'.
+	
+	\paragraph*{5.}{\bf Can you get a shell? If yes, pwn that server. What is the difference between bind and reverse shells?}
+	
 \end{document}
 
