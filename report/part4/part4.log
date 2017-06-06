@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  6 JUN 2017 01:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  6 JUN 2017 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -733,16 +733,16 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 73.
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 75.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -751,22 +751,22 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--74
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--74
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
 
  []
 
 <images/nikto.jpg, id=13, 1371.1225pt x 737.75626pt>
 File: images/nikto.jpg Graphic file (type jpg)
  <use images/nikto.jpg>
-Package pdftex.def Info: images/nikto.jpg used on input line 76.
+Package pdftex.def Info: images/nikto.jpg used on input line 78.
 (pdftex.def)             Requested size: 475.13014pt x 255.6519pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 76--77
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 78--79
 [][] 
  []
 
@@ -774,63 +774,63 @@ Overfull \hbox (22.16225pt too wide) in paragraph at lines 76--77
 File: images/osvdb.jpg Graphic file (type jpg)
 
 <use images/osvdb.jpg>
-Package pdftex.def Info: images/osvdb.jpg used on input line 84.
+Package pdftex.def Info: images/osvdb.jpg used on input line 86.
 (pdftex.def)             Requested size: 475.13014pt x 231.71939pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 84--85
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 86--87
 [][] 
  []
 
 
-Overfull \hbox (4.76866pt too wide) in paragraph at lines 88--99
+Overfull \hbox (4.76866pt too wide) in paragraph at lines 90--101
 []\T1/lmr/bx/n/12 Uniscan: \T1/lmr/m/n/12 (-20) Unis-can is a vul-ner-a-bil-ity
  scan-ner that can scan web-sites and web-applications
  []
 
 
-Overfull \hbox (55.08223pt too wide) in paragraph at lines 88--99
+Overfull \hbox (55.08223pt too wide) in paragraph at lines 90--101
 \T1/lmr/m/n/12 (-20) source and can be down-loaded from source-forge project pa
 ge at \T1/lmss/m/n/12 (-20) http://sourceforge.net/projects/uniscan/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--99
+Underfull \hbox (badness 10000) in paragraph at lines 90--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--99
+Underfull \hbox (badness 10000) in paragraph at lines 90--101
 
  []
 
 [3 <./images/osvdb.jpg>]
-Overfull \hbox (78.08237pt too wide) in paragraph at lines 100--104
+Overfull \hbox (78.08237pt too wide) in paragraph at lines 102--106
 \T1/lmtt/m/n/12 sudo echo "deb OWASP Mantra OS / #OWASP WTE Stable Repository" 
 >> /etc/apt/sources.list 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--104
+Underfull \hbox (badness 10000) in paragraph at lines 102--106
 
  []
 
 <images/zap1.jpg, id=24, 1369.115pt x 746.79pt>
 File: images/zap1.jpg Graphic file (type jpg)
  <use images/zap1.jpg>
-Package pdftex.def Info: images/zap1.jpg used on input line 107.
+Package pdftex.def Info: images/zap1.jpg used on input line 109.
 (pdftex.def)             Requested size: 475.13014pt x 259.15837pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 107--108
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 109--110
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
@@ -838,45 +838,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--114
 File: images/sqli1.jpg Graphic file (type jpg)
 
 <use images/sqli1.jpg>
-Package pdftex.def Info: images/sqli1.jpg used on input line 117.
+Package pdftex.def Info: images/sqli1.jpg used on input line 119.
 (pdftex.def)             Requested size: 475.13014pt x 257.47633pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 117--118
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 119--120
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--123
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
 
 <images/sqlmap1.jpg, id=30, 1371.1225pt x 742.775pt>
 File: images/sqlmap1.jpg Graphic file (type jpg)
  <use images/sqlmap1.jpg>
-Package pdftex.def Info: images/sqlmap1.jpg used on input line 137.
+Package pdftex.def Info: images/sqlmap1.jpg used on input line 139.
 (pdftex.def)             Requested size: 475.13014pt x 257.39102pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 137--138
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 139--140
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--139
+Underfull \hbox (badness 10000) in paragraph at lines 129--141
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--139
+Underfull \hbox (badness 10000) in paragraph at lines 129--141
 
  []
 
@@ -884,15 +884,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--139
 File: images/sqlmap2.jpg Graphic file (type jpg)
 
 <use images/sqlmap2.jpg>
-Package pdftex.def Info: images/sqlmap2.jpg used on input line 143.
+Package pdftex.def Info: images/sqlmap2.jpg used on input line 145.
 (pdftex.def)             Requested size: 475.13014pt x 161.9987pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 143--144
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 145--146
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
+Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
@@ -900,20 +900,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--145
 <images/sqlmap3.jpg, id=40, 967.615pt x 476.78125pt>
 File: images/sqlmap3.jpg Graphic file (type jpg)
  <use images/sqlmap3.jpg>
-Package pdftex.def Info: images/sqlmap3.jpg used on input line 153.
+Package pdftex.def Info: images/sqlmap3.jpg used on input line 155.
 (pdftex.def)             Requested size: 475.13014pt x 234.11227pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 153--154
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 155--156
 [][] 
  []
 
 <images/sqlmap4.jpg, id=41, 1047.915pt x 293.095pt>
 File: images/sqlmap4.jpg Graphic file (type jpg)
  <use images/sqlmap4.jpg>
-Package pdftex.def Info: images/sqlmap4.jpg used on input line 162.
+Package pdftex.def Info: images/sqlmap4.jpg used on input line 164.
 (pdftex.def)             Requested size: 475.13014pt x 132.88884pt.
 
-Overfull \hbox (22.16225pt too wide) in paragraph at lines 162--163
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 164--165
 [][] 
  []
 
@@ -935,7 +935,7 @@ fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on part4.pdf (9 pages, 1501127 bytes).
+Output written on part4.pdf (9 pages, 1501132 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
