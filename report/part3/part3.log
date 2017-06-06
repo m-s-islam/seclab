@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  6 JUN 2017 16:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.27)  6 JUN 2017 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,26 +977,116 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--251
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
+
+ []
+
+
+Overfull \hbox (14.56467pt too wide) in paragraph at lines 267--269
+\T1/lmss/m/n/12 (-20) http://192.168.1.102/index.php?hname={{_self.env.register
+UndefinedFilterCallback(''system'')}}
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
+
+ []
+
+
+Overfull \hbox (14.56467pt too wide) in paragraph at lines 272--274
+\T1/lmss/m/n/12 (-20) http://192.168.1.102/index.php?hname={{_self.env.register
+UndefinedFilterCallback(''system'')}}
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--274
+
+ []
+
+[12] <images/3_5_0.jpg, id=71, 906.38625pt x 333.245pt>
+File: images/3_5_0.jpg Graphic file (type jpg)
+ <use images/3_5_0.jpg>
+Package pdftex.def Info: images/3_5_0.jpg used on input line 276.
+(pdftex.def)             Requested size: 475.13014pt x 174.68674pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 276--277
+[][] 
+ []
+
+
+Overfull \hbox (14.56467pt too wide) in paragraph at lines 280--283
+\T1/lmss/m/n/12 (-20) http://192.168.1.102/index.php?hname={{_self.env.register
+UndefinedFilterCallback(''system'')}}
+ []
+
+
+Overfull \hbox (3.03992pt too wide) in paragraph at lines 280--283
+\T1/lmss/m/n/12 (-20) {{_self.env.getfilter(''openssl aes-256-cbc -d -a -iv ff5
+2cb37f3818b7f4e175cf222d7f6 -K moon123
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
+
+ []
+
+<images/3_5_1.jpg, id=72, 1365.1pt x 419.5675pt>
+File: images/3_5_1.jpg Graphic file (type jpg)
+ <use images/3_5_1.jpg>
+Package pdftex.def Info: images/3_5_1.jpg used on input line 285.
+(pdftex.def)             Requested size: 475.13014pt x 146.03136pt.
+
+Overfull \hbox (22.16225pt too wide) in paragraph at lines 285--286
+[][] 
+ []
+
+
 AED: lastpage setting LastPage
-[12] (./part3.aux) ) 
+[13 <./images/3_5_0.jpg> <./images/3_5_1.jpg>] (./part3.aux) ) 
 Here is how much of TeX's memory you used:
- 8634 strings out of 494945
- 132545 string characters out of 6181032
+ 8650 strings out of 494945
+ 132789 string characters out of 6181032
  325280 words of memory out of 5000000
- 11678 multiletter control sequences out of 15000+600000
- 54811 words of font info for 72 fonts, out of 8000000 for 9000
+ 11686 multiletter control sequences out of 15000+600000
+ 55084 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,11n,43p,368b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmb
-x10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on part3.pdf (13 pages, 3029154 bytes).
+{/usr/share/texmf
+/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}<
+/usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on part3.pdf (14 pages, 3384030 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 19005 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 19015 words of extra memory for PDF output out of 20736 (max. 10000000)
 

